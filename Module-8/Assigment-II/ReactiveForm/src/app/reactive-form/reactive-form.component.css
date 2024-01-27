@@ -1,0 +1,52 @@
+/* Add styles for highlighting the input fields */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #5cb3fd;
+  box-shadow: 0 0 10px #5cb3fd;
+}
+
+/* Style the container for a better layout */
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the form elements for a uniform appearance */
+.form-group {
+  margin-bottom: 25px; /* Increased space between form groups */
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-check-input {
+  margin-top: 6px;
+}
+
+.form-check-label {
+  margin-left: 20px;
+}
+
+.btn-primary {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:disabled {
+  background-color: #5cb3fd;
+}
