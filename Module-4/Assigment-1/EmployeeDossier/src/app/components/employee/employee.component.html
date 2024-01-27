@@ -1,0 +1,25 @@
+<h2>Employees</h2>
+<div class="container mt-3">
+    <table class="table table-light table-striped">
+        <thead>
+         <tr>
+             <th>Employee ID</th>
+             <th>First Name</th>
+            <th>Last Name</th>
+             <th>Salary</th>
+              <th>DOB</th>
+             <th>Email</th>
+         </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees" appColor="rgba(4, 128, 0, 0.42)">
+          <td>{{ employee.employeeId }}</td>
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+          <td>{{ employee.salary }}</td>
+          <td>{{ employee.dob | date }}</td>
+          <td>{{ employee.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

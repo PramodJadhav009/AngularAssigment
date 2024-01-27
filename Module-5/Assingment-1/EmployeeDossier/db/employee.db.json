@@ -1,0 +1,5 @@
+{
+    "employees": [
+      { "id": 1, "employee_name": "John", "employee_salary": 50000, "employee_age": 26, "profile_image": "url" }
+    ]
+  }

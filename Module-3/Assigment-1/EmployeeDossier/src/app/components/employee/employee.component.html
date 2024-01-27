@@ -1,0 +1,45 @@
+<h1>Employees</h1>
+<div class="container mt-3">
+    <h3>{{showEdit? 'Edit': 'Update'}}</h3>
+    <div>
+        <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Salary</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="showEdit">
+              <tr *ngFor="let employee of employeeRecords; let i = index">
+                <td>{{ employee.employeeId }}</td>
+                <td>{{ employee.firstName }}</td>
+                <td>{{ employee.lastName }}</td>
+                <td>{{ employee.salary }}</td>
+                <td>{{ employee.dob | date }}</td>
+                <td>{{ employee.email }}</td>
+                <td>
+                  <button class="btn btn-primary" (click)="editEmp(i)">Edit</button>
+                </td>
+              </tr>
+            </tbody>
+            <tbody *ngIf="!showEdit && selectedEmployee">
+              <tr>
+                <td><input type="text" [(ngModel)]="selectedEmployee.employeeId"/></td>
+                <td><input type="text" [(ngModel)]="selectedEmployee.firstName"/></td>
+                <td><input type="text" [(ngModel)]="selectedEmployee.lastName"/></td>
+                <td><input type="text" [(ngModel)]="selectedEmployee.salary"/></td>
+                <td><input type="date" [(ngModel)]="selectedEmployee.dob"/></td>
+                <td><input type="text" [(ngModel)]="selectedEmployee.email"/></td>
+                <td>
+                  <button class="btn btn-primary" (click)="updateEmp()">Update</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+</div>
